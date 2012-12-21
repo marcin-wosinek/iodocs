@@ -24,7 +24,7 @@ form#credentials
                      input(id='username', name='username', style='color=#EEEEEE')
                  div
                      label(for='key') Password
-                     input(id='password', name='password', value=defaultKey, style='color=#EEEEEE')
+                     input(id='password', name='password', type='password', value=defaultKey, style='color=#EEEEEE')
              - else
                  - if (apiInfo.oauth)
                      input(type='hidden', name='oauth', value='authrequired')
