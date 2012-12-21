@@ -38,5 +38,15 @@
         "protocol": "http",
         "baseURL": "requestb.in",
         "publicPath": "/"
+    },
+    "synapi": {
+        "name": "Synergy Rest Api",
+        "protocol": "http",
+        "baseURL": "synergy-int.roche.com",
+        "publicPath": "/synergy/api",
+        "auth": "basicAuth",
+        "headers": {
+            "Accept": "application/json"
+        }
     }
 }

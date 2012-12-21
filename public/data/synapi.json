@@ -1,0 +1,510 @@
+{
+  "endpoints" : [ {
+    "name" : "PropertiesResourceImpl",
+    "methods" : [ {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "prefix",
+        "Required" : false,
+        "Type" : "string"
+      } ],
+      "MethodName" : "findPropertiesAsMap",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/admin/properties/:group/:portal",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "prefix",
+        "Required" : false,
+        "Type" : "string"
+      } ],
+      "MethodName" : "findProperties",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/admin/properties/find/:group/:portal",
+      "RequiresOAuth" : false
+    } ]
+  }, {
+    "name" : "GenericAppResourceImpl",
+    "methods" : [ {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "application",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "id",
+        "Required" : true,
+        "Type" : "number"
+      } ],
+      "MethodName" : "getAppData",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/app/generic/:group/:portal/:application/:id",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "application",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "action",
+        "Required" : false,
+        "Type" : "string"
+      } ],
+      "MethodName" : "createAppData",
+      "Synopsis" : "",
+      "HTTPMethod" : "POST",
+      "URI" : "/app/generic/:group/:portal/:application",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "application",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "id",
+        "Required" : true,
+        "Type" : "number"
+      } ],
+      "MethodName" : "updateAppData",
+      "Synopsis" : "",
+      "HTTPMethod" : "PUT",
+      "URI" : "/app/generic/:group/:portal/:application/:id",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "application",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "id",
+        "Required" : true,
+        "Type" : "number"
+      } ],
+      "MethodName" : "deleteAppData",
+      "Synopsis" : "",
+      "HTTPMethod" : "DELETE",
+      "URI" : "/app/generic/:group/:portal/:application/:id",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "application",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "q",
+        "Required" : false,
+        "Type" : "string"
+      }, {
+        "Name" : "order",
+        "Required" : false,
+        "Type" : "string"
+      } ],
+      "MethodName" : "listApp",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/app/generic/:group/:portal/:application",
+      "RequiresOAuth" : false
+    } ]
+  }, {
+    "name" : "ContactResourceImpl",
+    "methods" : [ {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      } ],
+      "MethodName" : "getContacts",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contacts/list/:group/:portal",
+      "RequiresOAuth" : false
+    } ]
+  }, {
+    "name" : "PortalContentResourceImpl",
+    "methods" : [ {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "tag",
+        "Required" : false,
+        "Type" : "string"
+      }, {
+        "Name" : "limit",
+        "Required" : false,
+        "Default" : "100",
+        "Type" : "number"
+      }, {
+        "Name" : "days",
+        "Required" : false,
+        "Default" : "0",
+        "Type" : "number"
+      } ],
+      "MethodName" : "getLatest",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contents/latest/:group/:portal",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "limit",
+        "Required" : false,
+        "Default" : "30",
+        "Type" : "number"
+      } ],
+      "MethodName" : "getFavourites",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contents/favourites/:group/:portal",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "tag",
+        "Required" : false,
+        "Type" : "string"
+      }, {
+        "Name" : "limit",
+        "Required" : false,
+        "Default" : "100",
+        "Type" : "number"
+      }, {
+        "Name" : "days",
+        "Required" : false,
+        "Default" : "0",
+        "Type" : "number"
+      } ],
+      "MethodName" : "getFeatured",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contents/featured/:group/:portal",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "tag",
+        "Required" : false,
+        "Type" : "string"
+      }, {
+        "Name" : "limit",
+        "Required" : false,
+        "Default" : "100",
+        "Type" : "number"
+      }, {
+        "Name" : "days",
+        "Required" : false,
+        "Default" : "365",
+        "Type" : "number"
+      } ],
+      "MethodName" : "getMostViewed",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contents/mostviewed/:group/:portal",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      } ],
+      "MethodName" : "getTags",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contents/tags/:group/:portal",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "contentId",
+        "Required" : true,
+        "Type" : "string"
+      } ],
+      "MethodName" : "getContent",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contents/show/:group/:portal/:contentId",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "query",
+        "Required" : false,
+        "Type" : "string"
+      }, {
+        "Name" : "tag",
+        "Required" : false,
+        "Type" : "string"
+      }, {
+        "Name" : "limit",
+        "Required" : false,
+        "Default" : "100",
+        "Type" : "number"
+      } ],
+      "MethodName" : "search",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contents/search/:group/:portal",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "contentId",
+        "Required" : true,
+        "Type" : "string"
+      } ],
+      "MethodName" : "getComments",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contents/comments/:group/:portal/:contentId",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "contentId",
+        "Required" : true,
+        "Type" : "string"
+      } ],
+      "MethodName" : "postLike",
+      "Synopsis" : "",
+      "HTTPMethod" : "POST",
+      "URI" : "/contents/like/:group/:portal/:contentId",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "contentId",
+        "Required" : true,
+        "Type" : "string"
+      } ],
+      "MethodName" : "deleteLike",
+      "Synopsis" : "",
+      "HTTPMethod" : "DELETE",
+      "URI" : "/contents/like/:group/:portal/:contentId",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "contentId",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "comment",
+        "Required" : false,
+        "Type" : "string"
+      } ],
+      "MethodName" : "postComment",
+      "Synopsis" : "",
+      "HTTPMethod" : "POST",
+      "URI" : "/contents/comments/:group/:portal/:contentId",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "group",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "portal",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "contentId",
+        "Required" : true,
+        "Type" : "string"
+      }, {
+        "Name" : "Accept",
+        "Required" : false,
+        "Type" : "string",
+        "Location" : "header"
+      } ],
+      "MethodName" : "getContentBody",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contents/get/:group/:portal/:contentId",
+      "RequiresOAuth" : false
+    } ]
+  }, {
+    "name" : "PortalContentCommentResourceImpl",
+    "methods" : [ {
+      "parameters" : [ {
+        "Name" : "commentId",
+        "Required" : true,
+        "Type" : "number"
+      } ],
+      "MethodName" : "showComment",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/contents/comment/:commentId",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "commentId",
+        "Required" : true,
+        "Type" : "number"
+      } ],
+      "MethodName" : "deleteComment",
+      "Synopsis" : "",
+      "HTTPMethod" : "DELETE",
+      "URI" : "/contents/comment/:commentId",
+      "RequiresOAuth" : false
+    } ]
+  }, {
+    "name" : "UserResourceImpl",
+    "methods" : [ {
+      "parameters" : [ {
+        "Name" : "username",
+        "Required" : true,
+        "Type" : "string"
+      } ],
+      "MethodName" : "getUser",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/users/show/:username",
+      "RequiresOAuth" : false
+    }, {
+      "parameters" : [ {
+        "Name" : "username",
+        "Required" : true,
+        "Type" : "string"
+      } ],
+      "MethodName" : "getImage",
+      "Synopsis" : "",
+      "HTTPMethod" : "GET",
+      "URI" : "/users/image/:username",
+      "RequiresOAuth" : false
+    } ]
+  } ]
+}
